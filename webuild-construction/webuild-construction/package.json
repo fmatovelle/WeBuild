@@ -1,0 +1,30 @@
+{
+  "name": "webuild-construction-website",
+  "version": "1.0.0",
+  "description": "Professional construction business portfolio website",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server . --port=8000",
+    "serve": "python -m http.server 8000",
+    "validate": "html5validator index.html",
+    "lighthouse": "lighthouse http://localhost:8000 --output=json --output-path=./tests/lighthouse/report.json",
+    "deploy:netlify": "netlify deploy --prod --dir=.",
+    "deploy:surge": "surge . webuild-construction.surge.sh"
+  },
+  "keywords": [
+    "construction",
+    "portfolio",
+    "website",
+    "responsive",
+    "html5",
+    "css3",
+    "javascript"
+  ],
+  "author": "WeBuild Construction",
+  "license": "MIT",
+  "devDependencies": {
+    "html5validator": "^1.0.3",
+    "lighthouse": "^10.0.0",
+    "live-server": "^1.2.2"
+  }
+}
